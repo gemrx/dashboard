@@ -16,9 +16,8 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        "navbar header header"
         "navbar main   aside";
 }
 
@@ -65,13 +64,13 @@ nav {
         width: 6.625em;
 
         & path {
-            fill: #151823;
+            fill: #2e354c;
         }
     }
 }
 
 .profile {
-    color: #151823;
+    color: #2e354c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +100,8 @@ nav {
 .section-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
+    user-select: none;
 
     &.helpers {
         margin-top: auto;
@@ -109,18 +109,28 @@ nav {
 }
 
 .section {
-    color: #151823;
+    padding: 8px;
+    border-radius: 8px;
+    color: #2e354c;
     font-weight: 600;
-
     display: flex;
     align-items: center;
+
+    &.active {
+        color: #151823;
+        background-color: #d1d7e6;
+        & svg path {
+            fill: #151823;
+        }
+
+    }
 
     & svg {
         width: 1.25rem;
         margin-right: 12px;
 
         & path {
-            fill: #151823;
+            fill: #2e354c;
         }
     }
 
@@ -138,7 +148,7 @@ nav {
     --switcher-svg-size: 1.25em;
     --switcher-gap: 0.8em;
     --switcher-padding: 0.35em;
-    
+    padding-left: 8px;
     width: fit-content;
 }
 
