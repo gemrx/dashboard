@@ -1,3 +1,3 @@
-# Sign Up Form
+# Dashboard
 
 [Live App](https://gemrx.github.io/dashboard/)
